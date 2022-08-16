@@ -42,7 +42,7 @@ app.post('/upload', uploadMiddleware.single('avatar'),(req, res) => {
 // GET /uploads/:filename - Yükleme formundan gelen dosyaları local klasöre ekleyen URL
 app.get('/uploads/:filename', (req, res) => {
     var filename = req.params.filename
-    res.sendFile(__dirname + '/uploads/' + filename)
+    res.sendFile(__dirname + filename)  //res.sendFile(__dirname + '/uploads/' + filename)
 })
 
 
