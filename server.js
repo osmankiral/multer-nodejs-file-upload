@@ -47,5 +47,5 @@ app.get('/uploads/:filename', (req, res) => {
 
 
 app.listen(process.env.PORT || 3000, () => {
-    console.log('server is running on port http:/localhost:9090')
+    console.log('server is running on port https://arcane-lowlands-72002.herokuapp.com/')
 })
