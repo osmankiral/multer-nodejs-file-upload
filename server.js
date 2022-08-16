@@ -46,5 +46,12 @@ app.get('/uploads/:filename', (req, res) => {
 })
 
 
-var port_number = server.listen(9090);
-app.listen(port_number);
+//var port_number = server.listen(9090);
+//app.listen(port_number);
+
+const host = '0.0.0.0';
+const port = process.env.PORT || 3000;
+
+app.listen(port, host, function() {
+    console.log("Server started.......");
+  });
