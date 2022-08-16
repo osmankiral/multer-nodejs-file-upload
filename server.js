@@ -42,10 +42,9 @@ app.post('/upload', uploadMiddleware.single('avatar'),(req, res) => {
 // GET /uploads/:filename - Yükleme formundan gelen dosyaları local klasöre ekleyen URL
 app.get('/uploads/:filename', (req, res) => {
     var filename = req.params.filename
-    res.sendFile(__dirname + filename)  //res.sendFile(__dirname + '/uploads/' + filename)
+    res.sendFile(__dirname + '/uploads/' + filename)  
 })
 
 
-app.listen(process.env.PORT || 3000, () => {
-    console.log('server is running on port https://arcane-lowlands-72002.herokuapp.com/')
-})
+var port_number = server.listen(process.env.PORT || 3000);
+app.listen(port_number);
