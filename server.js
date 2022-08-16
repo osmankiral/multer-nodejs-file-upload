@@ -46,6 +46,6 @@ app.get('/uploads/:filename', (req, res) => {
 })
 
 
-app.listen(9090, () => {
+app.listen(3000, () => {
     console.log('server is running on port http:/localhost:9090')
 })
